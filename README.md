@@ -4,13 +4,17 @@
 # 说明
 不是专业做安卓开发，只是实现了js调用百度sdk，具体tts功能建议查看百度官方文档。
 # 安装
-1. 远程
+1. 远程  
 控制台命令
+```
 $ cordova plugin add https://github.com/xuehexi/cordova-baidu-tts.git
-2. 本地
+```
+2. 本地  
 下载源码后，控制台命令
+```
 $ cordova plugin add  /目录/cordova-baidu-tts
-＃ 使用
+```
+# 使用
 1. 初始化
 ```
 var options_init={
