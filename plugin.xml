@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin id="cordova-baidu-tts" version="0.1.0">
+
+  <name>BaiduTrace</name>
+  <platform name="android">
+
+    <js-module src="www/Tts.js">
+      <clobbers target="baidu_tts" />
+    </js-module>
+
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="BaiduTts">
+        <param name="android-package" value="com.xuehexi.plugin.BaiduTts" />
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/BaiduTts.java" target-dir="src/com/xuehexi/plugin" />
+
+    <source-file src="src/android/libs/armeabi/libBDSpeechDecoder_V1.so" target-dir="libs/armeabi" />
+    <source-file src="src/android/libs/armeabi/libbd_etts.so" target-dir="libs/armeabi" />
+    <source-file src="src/android/libs/armeabi/libbdtts.so" target-dir="libs/armeabi" />
+    <source-file src="src/android/libs/armeabi/libgnustl_shared.so" target-dir="libs/armeabi" />
+
+    <source-file src="src/android/libs/armeabi-v7a/libBDSpeechDecoder_V1.so" target-dir="libs/armeabi-v7a" />
+    <source-file src="src/android/libs/armeabi-v7a/libbd_etts.so" target-dir="libs/armeabi-v7a" />
+    <source-file src="src/android/libs/armeabi-v7a/libbdtts.so" target-dir="libs/armeabi-v7a" />
+    <source-file src="src/android/libs/armeabi-v7a/libgnustl_shared.so" target-dir="libs/armeabi-v7a" />
+
+
+    <source-file src="src/android/libs/galaxy-v2.0.jar" target-dir="libs" />
+    <source-file src="src/android/libs/com.baidu.tts_2.2.1.20160122_b23aaf0_release.jar" target-dir="libs" />
+
+    <config-file target="AndroidManifest.xml" parent="/*">
+      <uses-permission android:name="android.permission.INTERNET" />
+      <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+      <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+      <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+      <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+      <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+      <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    </config-file>
+  </platform>
+</plugin>
