@@ -4,18 +4,18 @@
 # 说明
 不是专业做安卓开发，只是实现了js调用百度sdk，具体tts功能建议查看百度官方文档。
 # 安装
-1. 远程  
+1.远程  
 控制台命令
 ```
 $ cordova plugin add https://github.com/xuehexi/cordova-baidu-tts.git
 ```
-2. 本地  
+2.本地  
 下载源码后，控制台命令
 ```
 $ cordova plugin add  /目录/cordova-baidu-tts
 ```
 # 使用
-1. 初始化
+1.初始化
 ```
 var options_init={
                 appId:"你在百度申请的id", 
@@ -26,7 +26,7 @@ var options_init={
             	};
 baidu_tts.init(options_init);
 ```
-2. 播放
+2.播放
 ```
 var options = {txt:"新年好"};
 baidu_tts.speak(
@@ -34,7 +34,7 @@ baidu_tts.speak(
         function(e){},   //error
         options);
 ```
-3. 停止
+3.停止
 ```
 baidu_tts.stop();
 ```
